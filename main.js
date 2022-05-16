@@ -14,16 +14,33 @@ fetch(url)
   .then(function (data) {
     let products = data
     return products.map(function (product) {
-      let li = createNode('li')
+      let liItem = createNode('li')
       let img = createNode('img')
-      let span = createNode('span')
+      let divider = createNode('div')
+      let ulInfo = createNode('ul')
+      let liInfoName = createNode('li')
+      let liInfoAverage = createNode('li')
+      let liInfoRating = createNode('li')
+      let liInfoReview = createNode('li')
 
       img.src = product.imagePath
-      span.innerHTML = product.name
+      liInfoName.innerHTML = product.name
+      liInfoAverage.innerHTML = `NPS: ${product.average_note}`
+      liInfoRating.innerHTML = `RATING: ${product.rating}`
+      liInfoReview.innerHTML = `&#9733  ${product.reviews_counter} Reviews`
 
-      append(li, img)
-      append(li, span)
-      append(ul, li)
+      liItem.classList.add('row')
+      divider.classList.add('divider-vertical')
+      ulInfo.classList.add('info')
+
+      append(liItem, img)
+      append(liItem, divider)
+      append(ulInfo, liInfoName)
+      append(ulInfo, liInfoAverage)
+      append(ulInfo, liInfoRating)
+      append(ulInfo, liInfoReview)
+      append(liItem, ulInfo)
+      append(ul, liItem)
     })
   })
   .catch(function (error) {
