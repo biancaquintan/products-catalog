@@ -158,14 +158,13 @@ button {
 @media screen and (max-width: 500px) {
   li.row {
     padding: 12px;
-  }
-  ul.info li:last-child {
-    width: 100px;
+  } 
+  ul.info {
     margin-top: 2px;
   }
 }
 
-@media screen and (max-width: 340px) {
+@media screen and (max-width: 430px) {
   header img {
     max-width: 200px;
   }
