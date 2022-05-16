@@ -14,29 +14,25 @@
     />
   </head>
   <body>
-    <header>
-      <img src="/images/b2b_stack_logo.png" alt="Logo B2B Stack" />
-      <p>
-        Single Page Application (SPA) com scroll infinito consumindo a
-        <a
-          href="https://portal.hml.b2bstack.com.br/api/v1/products"
-          title="Abrir API de Produtos em uma nova aba"
-          target="_blank"
-          >API DE PRODUTOS</a
-        >
-        utilizando apenas as tecnologias web HTML, JavaScript e CSS (sem a
-        presença de frameworks).
-      </p>
-    </header>
-
-    <hr class="rounded" />
     <div id="container">
+      <header>
+        <img src="/images/b2b_stack_logo.png" alt="Logo B2B Stack" />
+        <p>
+          Single Page Application (SPA) com scroll infinito consumindo a
+          <a
+            href="https://portal.hml.b2bstack.com.br/api/v1/products"
+            title="Abrir API de Produtos em uma nova aba"
+            target="_blank"
+            >API DE PRODUTOS</a
+          >
+          utilizando apenas as tecnologias web HTML, JavaScript e CSS (sem a
+          presença de frameworks).
+        </p>
+      </header>
+      <hr class="rounded" />
       <ul id="catalog"></ul>
-    </div>
-
-    <footer>
-      <div id="caption">
-        <ul>
+      <footer id="footer">
+        <ul id="caption">
           <li><strong>* NPS: </strong>NPS(Net Promoter Score) do produto</li>
           <li>
             <strong>* RATING: </strong>Nota média dada pelo algoritimo B2B Stack
@@ -46,11 +42,11 @@
             recebeu
           </li>
         </ul>
-      </div>
-      <div id="copyright">
-        <span>© Copyright 2022 - All rights reserved.</span>
-      </div>
-    </footer>
+        <div id="copyright">
+          <span>© Copyright 2022 - All rights reserved.</span>
+        </div>
+      </footer>
+    </div>
 
     <script src="main.js"></script>
   </body>

@@ -15,7 +15,7 @@ fetch(url)
     let products = data
     return products.map(function (product) {
       let liItem = createNode('li')
-      let img = createNode('img')
+      let imgProduct = createNode('img')
       let divider = createNode('div')
       let ulInfo = createNode('ul')
       let liInfoName = createNode('li')
@@ -23,18 +23,19 @@ fetch(url)
       let liInfoRating = createNode('li')
       let liInfoReview = createNode('li')
 
-      img.src = product.imagePath
-      img.alt = `Imagem do produto: ${product.name}`
+      imgProduct.src = product.imagePath
+      imgProduct.alt = `Imagem do produto: ${product.name}`
       liInfoName.innerHTML = product.name
       liInfoAverage.innerHTML = `NPS: ${product.average_note}`
       liInfoRating.innerHTML = `RATING: ${product.rating}`
       liInfoReview.innerHTML = `&#9733  ${product.reviews_counter} Reviews`
 
       liItem.classList.add('row')
+      imgProduct.classList.add('product-img')
       divider.classList.add('divider-vertical')
       ulInfo.classList.add('info')
 
-      append(liItem, img)
+      append(liItem, imgProduct)
       append(liItem, divider)
       append(ulInfo, liInfoName)
       append(ulInfo, liInfoAverage)
@@ -47,3 +48,5 @@ fetch(url)
   .catch(function (error) {
     console.log(error)
   })
+
+captionView()
