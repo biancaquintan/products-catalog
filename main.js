@@ -1,5 +1,25 @@
 const ul = document.getElementById('catalog')
 const url = 'https://portal.hml.b2bstack.com.br/api/v1/products'
+const footer = document.getElementById('footer')
+
+const caption = document.getElementById('caption')
+let btnCaption = createNode('button')
+
+function testando() {
+  if (btnCaption.textContent === 'Mostrar Legenda') {
+    btnCaption.textContent = 'x FECHAR'
+    caption.style.display = 'block'
+  } else {
+    caption.style.display = 'none'
+    btnCaption.textContent = 'Mostrar Legenda'
+  }
+}
+
+function captionView() {
+  btnCaption.textContent = 'Mostrar Legenda'
+  btnCaption.setAttribute('onclick', 'testando()')
+  append(footer, btnCaption)
+}
 
 function createNode(element) {
   return document.createElement(element)
