@@ -24,6 +24,7 @@ fetch(url)
       let liInfoReview = createNode('li')
 
       img.src = product.imagePath
+      img.alt = `Imagem do produto: ${product.name}`
       liInfoName.innerHTML = product.name
       liInfoAverage.innerHTML = `NPS: ${product.average_note}`
       liInfoRating.innerHTML = `RATING: ${product.rating}`
