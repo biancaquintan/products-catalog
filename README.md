@@ -10,3 +10,6 @@ Acessando localmente:
 <i>2- Abra o aquivo index.html pelo browser (Chrome, Firefox, Safari, etc.)</i>
 
 A aplicação também está disponível no link: https://biancaquintan.github.io/products-catalog/
+
+![image](https://user-images.githubusercontent.com/23643183/168519019-c9bc0792-f584-4edc-a9ee-69745473af2f.png)
+<b>*Imagem ilustrativa</b>
